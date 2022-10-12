@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-
   def index
     @events = Event.all
   end
@@ -8,7 +7,7 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
-def create
+  def create
     Event.create(event_parameter)
     redirect_to events_path
   end
